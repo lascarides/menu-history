@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Menu page:</b>
+  <%= @menu_section_instance.menu_page_id %>
+</p>
+
+<p>
+  <b>Menu section:</b>
+  <%= @menu_section_instance.menu_section_id %>
+</p>
+
+<p>
+  <b>X pos:</b>
+  <%= @menu_section_instance.x_pos %>
+</p>
+
+<p>
+  <b>Y pos:</b>
+  <%= @menu_section_instance.y_pos %>
+</p>
+
+<p>
+  <b>Width:</b>
+  <%= @menu_section_instance.width %>
+</p>
+
+<p>
+  <b>Width:</b>
+  <%= @menu_section_instance.width %>
+</p>
+
+
+<%= link_to 'Edit', edit_menu_section_instance_path(@menu_section_instance) %> |
+<%= link_to 'Back', menu_section_instances_path %>

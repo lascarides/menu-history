@@ -1,0 +1,19 @@
+<h1>Reports</h1>
+
+<h2>Current Totals</h2>
+
+<p>As of <%= Time.now.strftime("%A %B %d, %Y") %>, there have been <strong><%= MenuItem.count(:all) %> items</strong> transcribed off of <strong><%= Menu.count(:all) %> menus</strong>.</p>
+
+
+<h2>Other Reports</h2>
+
+
+<ul>
+	<li><%= link_to "By year", :action => "by_year" %></li>
+	<li><%= link_to "By country", :action => "by_country" %></li>
+	<li>By location</li>
+</ul>
+
+<h2>API Access</h2>
+
+<p>text t/k</p>

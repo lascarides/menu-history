@@ -1,0 +1,23 @@
+<h1>Listing menu_sections</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @menu_sections.each do |menu_section| %>
+  <tr>
+    <td><%= menu_section.name %></td>
+    <td><%= link_to 'Show', menu_section %></td>
+    <td><%= link_to 'Edit', edit_menu_section_path(menu_section) %></td>
+    <td><%= link_to 'Destroy', menu_section, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Menu section', new_menu_section_path %>

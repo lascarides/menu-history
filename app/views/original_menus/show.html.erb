@@ -1,0 +1,112 @@
+<p id="notice"><%= notice %></p>
+
+<h2>Date info</h2>
+
+<p>
+  <b>Orig date:</b>
+  <%= @original_menu.orig_date %><br />
+  <%= @original_menu.date_guess %>
+</p>
+
+<p>
+  <b>Other Date:</b>
+  <%= @original_menu.date %>
+</p>
+
+<p>
+  <b>Textdate:</b>
+  <%= @original_menu.textdate %>
+</p>
+
+<p>
+  <b>Dateadded:</b>
+  <%= @original_menu.dateadded %>
+</p>
+
+
+
+<h2>Venue info</h2>
+
+<p>
+  <b>Sponsor:</b>
+  <%= @original_menu.sponsor %>
+</p>
+
+<p>
+  <b>Event:</b>
+  <%= @original_menu.event %>
+</p>
+
+<p>
+  <b>Occasion:</b>
+  <%= @original_menu.occasion %>
+</p>
+
+<p>
+  <b>Place:</b>
+  <%= @original_menu.place %>
+</p>
+
+<p>
+  <b>Venue:</b>
+  <%= @original_menu.venue %>
+</p>
+
+<p>
+  <b>Organization:</b>
+  <%= @original_menu.organization %>
+</p>
+
+<p>
+  <b>City:</b>
+  <%= @original_menu.city %>
+</p>
+
+<p>
+  <b>State:</b>
+  <%= @original_menu.state %>
+</p>
+
+
+<h2>Item info</h2>
+
+<p>
+  <b>Physical description:</b>
+  <%= @original_menu.physical_description %>
+</p>
+
+<p>
+  <b>Notes:</b>
+  <%= @original_menu.notes.downcase %>
+</p>
+
+<p>
+  <b>Call number:</b>
+  <%= @original_menu.call_number %>
+</p>
+
+<p>
+  <b>Keywords:</b>
+  <%= @original_menu.keywords.downcase %>
+</p>
+
+<p>
+  <b>Language:</b>
+  <%= @original_menu.language %>
+</p>
+
+
+<p>
+  <b>Digital:</b>
+  <%= @original_menu.digital_id %>
+</p>
+
+<p>
+  <b>Digi struc:</b>
+  <%= @original_menu.digi_struc %>
+</p>
+
+
+
+<%= link_to 'Edit', edit_original_menu_path(@original_menu) %> |
+<%= link_to 'Back', original_menus_path %>

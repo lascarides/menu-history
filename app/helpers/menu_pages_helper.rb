@@ -1,0 +1,2 @@
+module MenuPagesHelper
+end

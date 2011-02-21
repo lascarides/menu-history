@@ -1,0 +1,14 @@
+<h1>Menus by year</h1>
+
+<table class="histogram">
+<% @menus.each do |year, menus| %>
+	<tr>
+		<td><h3><%= year %></h3></td>
+		<td>
+			<% menus.each do |menu| %>
+			<%= link_to image_tag(menu.thumbnail_address, :height => 70), menu, :title => "#{menu.display_name} #{menu.display_date}" %>
+			<% end %>
+		</td>
+	</tr>
+<% end %>
+</table>

@@ -1,0 +1,50 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @menu.name %>
+</p>
+
+<p>
+  <b>Location:</b>
+  <%= @menu.location_id %>
+</p>
+
+<p>
+  <b>Date of menu:</b>
+  <%= @menu.date_of_menu %>
+</p>
+
+<p>
+  <b>Day:</b>
+  <%= @menu.day %>
+</p>
+
+<p>
+  <b>Month:</b>
+  <%= @menu.month %>
+</p>
+
+<p>
+  <b>Year:</b>
+  <%= @menu.year %>
+</p>
+
+<p>
+  <b>Is sectioned:</b>
+  <%= @menu.is_sectioned %>
+</p>
+
+<p>
+  <b>Is approved:</b>
+  <%= @menu.is_approved %>
+</p>
+
+<p>
+  <b>Currency:</b>
+  <%= @menu.currency_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_menu_path(@menu) %> |
+<%= link_to 'Back', menus_path %>

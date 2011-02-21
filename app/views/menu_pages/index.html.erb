@@ -1,0 +1,29 @@
+<h1>Listing menu_pages</h1>
+
+<table>
+  <tr>
+    <th>Menu</th>
+    <th>Page number</th>
+    <th>Repository uuid</th>
+    <th>Catalog number</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @menu_pages.each do |menu_page| %>
+  <tr>
+    <td><%= menu_page.menu_id %></td>
+    <td><%= menu_page.page_number %></td>
+    <td><%= menu_page.repository_uuid %></td>
+    <td><%= menu_page.catalog_number %></td>
+    <td><%= link_to 'Show', menu_page %></td>
+    <td><%= link_to 'Edit', edit_menu_page_path(menu_page) %></td>
+    <td><%= link_to 'Destroy', menu_page, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Menu page', new_menu_page_path %>

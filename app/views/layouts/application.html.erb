@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+	<title><%= @page_title %></title>
+	<%= stylesheet_link_tag 'styles' %>
+	<%= javascript_include_tag :defaults %>
+</head>
+<body>
+	
+<div id="global_nav">
+	<%= link_to_unless_current "Menus", menus_path %> •
+	<%= link_to_unless_current "Dishes", dishes_path %> •
+	<%= link_to_unless_current "Locations", locations_path %> •
+	<%= link_to_unless_current "Reports", reports_path %> •
+	<%= link_to_unless_current "Help", roadmap_path %> •
+	<%= link_to_unless_current "About", about_path %>
+	
+	<%= form_tag "/items" %>
+	Search <%= text_field_tag :search_query %> 
+	<select name="type">
+		<option>Dishes</option>
+		<option>Locations</option>
+	</select>  <%= submit_tag "Go" %>
+	</form>
+</div>
+
+<% if flash[:notice] %>
+<div class="notice"><%= flash[:notice] %></div>
+<% end %>
+
+<div id="main">
+<%= yield %>
+</div>
+	
+</body>
+</html>

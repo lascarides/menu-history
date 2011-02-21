@@ -1,0 +1,53 @@
+<table>
+  <tr>
+    <th>Sponsor</th>
+    <th>Event</th>
+    <th>Orig date</th>
+    <th>Place</th>
+    <th>Physical description</th>
+    <th>Occasion</th>
+    <th>Venue</th>
+    <th>Organization</th>
+    <th>Notes</th>
+    <th>Call number</th>
+    <th>Keywords</th>
+    <th>Date</th>
+    <th>Language</th>
+    <th>City</th>
+    <th>State</th>
+    <th>Digital</th>
+    <th>Textdate</th>
+    <th>Digi struc</th>
+    <th>Dateadded</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @original_menus.each do |original_menu| %>
+  <tr>
+    <td><%= original_menu.sponsor %></td>
+    <td><%= original_menu.event %></td>
+    <td><%= original_menu.orig_date %></td>
+    <td><%= original_menu.place %></td>
+    <td><%= original_menu.physical_description %></td>
+    <td><%= original_menu.occasion %></td>
+    <td><%= original_menu.venue %></td>
+    <td><%= original_menu.organization %></td>
+    <td><%= original_menu.notes %></td>
+    <td><%= original_menu.call_number %></td>
+    <td><%= original_menu.keywords %></td>
+    <td><%= original_menu.date %></td>
+    <td><%= original_menu.language %></td>
+    <td><%= original_menu.city %></td>
+    <td><%= original_menu.state %></td>
+    <td><%= original_menu.digital_id %></td>
+    <td><%= original_menu.textdate %></td>
+    <td><%= original_menu.digi_struc %></td>
+    <td><%= original_menu.dateadded %></td>
+    <td><%= link_to 'Show', original_menu %></td>
+    <td><%= link_to 'Edit', edit_original_menu_path(original_menu) %></td>
+    <td><%= link_to 'Destroy', original_menu, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>

@@ -1,0 +1,43 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  sponsor: MyString
+  event: MyString
+  orig_date: MyString
+  place: MyString
+  physical_description: MyString
+  occasion: MyString
+  venue: MyString
+  organization: MyString
+  notes: MyString
+  call_number: MyString
+  keywords: MyString
+  date: MyString
+  language: MyString
+  city: MyString
+  state: MyString
+  digital_id: MyString
+  textdate: MyString
+  digi_struc: MyString
+  dateadded: MyString
+
+two:
+  sponsor: MyString
+  event: MyString
+  orig_date: MyString
+  place: MyString
+  physical_description: MyString
+  occasion: MyString
+  venue: MyString
+  organization: MyString
+  notes: MyString
+  call_number: MyString
+  keywords: MyString
+  date: MyString
+  language: MyString
+  city: MyString
+  state: MyString
+  digital_id: MyString
+  textdate: MyString
+  digi_struc: MyString
+  dateadded: MyString

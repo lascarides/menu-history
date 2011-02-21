@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Menu page:</b>
+  <%= @menu_item.menu_page_id %>
+</p>
+
+<p>
+  <b>X pos:</b>
+  <%= @menu_item.x_pos %>
+</p>
+
+<p>
+  <b>Y pos:</b>
+  <%= @menu_item.y_pos %>
+</p>
+
+<p>
+  <b>Price:</b>
+  <%= @menu_item.price %>
+</p>
+
+<p>
+  <b>Menu section:</b>
+  <%= @menu_item.menu_section_id %>
+</p>
+
+<p>
+  <b>Dish:</b>
+  <%= @menu_item.dish_id %>
+</p>
+
+<p>
+  <b>Is questionable:</b>
+  <%= @menu_item.is_questionable %>
+</p>
+
+
+<%= link_to 'Edit', edit_menu_item_path(@menu_item) %> |
+<%= link_to 'Back', menu_items_path %>

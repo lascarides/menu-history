@@ -1,0 +1,93 @@
+<%= form_for(@original_menu) do |f| %>
+  <% if @original_menu.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@original_menu.errors.count, "error") %> prohibited this original_menu from being saved:</h2>
+
+      <ul>
+      <% @original_menu.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :sponsor %><br />
+    <%= f.text_field :sponsor %>
+  </div>
+  <div class="field">
+    <%= f.label :event %><br />
+    <%= f.text_field :event %>
+  </div>
+  <div class="field">
+    <%= f.label :orig_date %><br />
+    <%= f.text_field :orig_date %>
+  </div>
+  <div class="field">
+    <%= f.label :place %><br />
+    <%= f.text_field :place %>
+  </div>
+  <div class="field">
+    <%= f.label :physical_description %><br />
+    <%= f.text_field :physical_description %>
+  </div>
+  <div class="field">
+    <%= f.label :occasion %><br />
+    <%= f.text_field :occasion %>
+  </div>
+  <div class="field">
+    <%= f.label :venue %><br />
+    <%= f.text_field :venue %>
+  </div>
+  <div class="field">
+    <%= f.label :organization %><br />
+    <%= f.text_field :organization %>
+  </div>
+  <div class="field">
+    <%= f.label :notes %><br />
+    <%= f.text_field :notes %>
+  </div>
+  <div class="field">
+    <%= f.label :call_number %><br />
+    <%= f.text_field :call_number %>
+  </div>
+  <div class="field">
+    <%= f.label :keywords %><br />
+    <%= f.text_field :keywords %>
+  </div>
+  <div class="field">
+    <%= f.label :date %><br />
+    <%= f.text_field :date %>
+  </div>
+  <div class="field">
+    <%= f.label :language %><br />
+    <%= f.text_field :language %>
+  </div>
+  <div class="field">
+    <%= f.label :city %><br />
+    <%= f.text_field :city %>
+  </div>
+  <div class="field">
+    <%= f.label :state %><br />
+    <%= f.text_field :state %>
+  </div>
+  <div class="field">
+    <%= f.label :digital_id %><br />
+    <%= f.text_field :digital_id %>
+  </div>
+  <div class="field">
+    <%= f.label :textdate %><br />
+    <%= f.text_field :textdate %>
+  </div>
+  <div class="field">
+    <%= f.label :digi_struc %><br />
+    <%= f.text_field :digi_struc %>
+  </div>
+  <div class="field">
+    <%= f.label :dateadded %><br />
+    <%= f.text_field :dateadded %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

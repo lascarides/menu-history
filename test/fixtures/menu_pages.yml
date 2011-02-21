@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  menu_id: 1
+  page_number: 1
+  repository_uuid: MyString
+  catalog_number: MyString
+
+two:
+  menu_id: 1
+  page_number: 1
+  repository_uuid: MyString
+  catalog_number: MyString

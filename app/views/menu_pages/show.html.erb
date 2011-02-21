@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Menu:</b>
+  <%= @menu_page.menu_id %>
+</p>
+
+<p>
+  <b>Page number:</b>
+  <%= @menu_page.page_number %>
+</p>
+
+<p>
+  <b>Repository uuid:</b>
+  <%= @menu_page.repository_uuid %>
+</p>
+
+<p>
+  <b>Catalog number:</b>
+  <%= @menu_page.catalog_number %>
+</p>
+
+
+<%= link_to 'Edit', edit_menu_page_path(@menu_page) %> |
+<%= link_to 'Back', menu_pages_path %>

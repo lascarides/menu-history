@@ -1,0 +1,23 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  name: MyString
+  location_id: 1
+  date_of_menu: 2011-01-26
+  day: 1
+  month: 1
+  year: 1
+  is_sectioned: false
+  is_approved: false
+  currency_id: 1
+
+two:
+  name: MyString
+  location_id: 1
+  date_of_menu: 2011-01-26
+  day: 1
+  month: 1
+  year: 1
+  is_sectioned: false
+  is_approved: false
+  currency_id: 1

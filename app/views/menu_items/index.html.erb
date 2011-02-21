@@ -1,0 +1,35 @@
+<h1>Listing menu_items</h1>
+
+<table>
+  <tr>
+    <th>Menu page</th>
+    <th>X pos</th>
+    <th>Y pos</th>
+    <th>Price</th>
+    <th>Menu section</th>
+    <th>Dish</th>
+    <th>Is questionable</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @menu_items.each do |menu_item| %>
+  <tr>
+    <td><%= menu_item.menu_page_id %></td>
+    <td><%= menu_item.x_pos %></td>
+    <td><%= menu_item.y_pos %></td>
+    <td><%= menu_item.price %></td>
+    <td><%= menu_item.menu_section_id %></td>
+    <td><%= menu_item.dish_id %></td>
+    <td><%= menu_item.is_questionable %></td>
+    <td><%= link_to 'Show', menu_item %></td>
+    <td><%= link_to 'Edit', edit_menu_item_path(menu_item) %></td>
+    <td><%= link_to 'Destroy', menu_item, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Menu item', new_menu_item_path %>

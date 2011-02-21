@@ -1,0 +1,41 @@
+<%= form_for(@menu_section_instance) do |f| %>
+  <% if @menu_section_instance.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@menu_section_instance.errors.count, "error") %> prohibited this menu_section_instance from being saved:</h2>
+
+      <ul>
+      <% @menu_section_instance.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :menu_page_id %><br />
+    <%= f.text_field :menu_page_id %>
+  </div>
+  <div class="field">
+    <%= f.label :menu_section_id %><br />
+    <%= f.text_field :menu_section_id %>
+  </div>
+  <div class="field">
+    <%= f.label :x_pos %><br />
+    <%= f.text_field :x_pos %>
+  </div>
+  <div class="field">
+    <%= f.label :y_pos %><br />
+    <%= f.text_field :y_pos %>
+  </div>
+  <div class="field">
+    <%= f.label :width %><br />
+    <%= f.text_field :width %>
+  </div>
+  <div class="field">
+    <%= f.label :width %><br />
+    <%= f.text_field :width %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

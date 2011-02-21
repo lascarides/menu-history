@@ -1,0 +1,53 @@
+<%= form_for(@menu) do |f| %>
+  <% if @menu.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@menu.errors.count, "error") %> prohibited this menu from being saved:</h2>
+
+      <ul>
+      <% @menu.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :location_id %><br />
+    <%= f.text_field :location_id %>
+  </div>
+  <div class="field">
+    <%= f.label :date_of_menu %><br />
+    <%= f.date_select :date_of_menu %>
+  </div>
+  <div class="field">
+    <%= f.label :day %><br />
+    <%= f.text_field :day %>
+  </div>
+  <div class="field">
+    <%= f.label :month %><br />
+    <%= f.text_field :month %>
+  </div>
+  <div class="field">
+    <%= f.label :year %><br />
+    <%= f.text_field :year %>
+  </div>
+  <div class="field">
+    <%= f.label :is_sectioned %><br />
+    <%= f.check_box :is_sectioned %>
+  </div>
+  <div class="field">
+    <%= f.label :is_approved %><br />
+    <%= f.check_box :is_approved %>
+  </div>
+  <div class="field">
+    <%= f.label :currency_id %><br />
+    <%= f.text_field :currency_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

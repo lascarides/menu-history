@@ -1,0 +1,19 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  menu_page_id: 1
+  x_pos: 1.5
+  y_pos: 1.5
+  price: 1.5
+  menu_section_id: 1
+  dish_id: 1
+  is_questionable: false
+
+two:
+  menu_page_id: 1
+  x_pos: 1.5
+  y_pos: 1.5
+  price: 1.5
+  menu_section_id: 1
+  dish_id: 1
+  is_questionable: false

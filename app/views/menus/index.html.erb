@@ -1,0 +1,39 @@
+<h1>Listing menus</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Location</th>
+    <th>Date of menu</th>
+    <th>Day</th>
+    <th>Month</th>
+    <th>Year</th>
+    <th>Is sectioned</th>
+    <th>Is approved</th>
+    <th>Currency</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @menus.each do |menu| %>
+  <tr>
+    <td><%= menu.name %></td>
+    <td><%= menu.location_id %></td>
+    <td><%= menu.date_of_menu %></td>
+    <td><%= menu.day %></td>
+    <td><%= menu.month %></td>
+    <td><%= menu.year %></td>
+    <td><%= menu.is_sectioned %></td>
+    <td><%= menu.is_approved %></td>
+    <td><%= menu.currency_id %></td>
+    <td><%= link_to 'Show', menu %></td>
+    <td><%= link_to 'Edit', edit_menu_path(menu) %></td>
+    <td><%= link_to 'Destroy', menu, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Menu', new_menu_path %>
