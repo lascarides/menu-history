@@ -29,3 +29,18 @@ gem 'sqlite3-ruby', :require => 'sqlite3'
 # group :development, :test do
 #   gem 'webrat'
 # end
+
+group :test do 
+	gem 'rspec-rails', '>= 2.0.0.beta.10'
+end
+
+group :cucumber do
+  gem 'capybara'
+  gem 'database_cleaner'
+  gem 'cucumber-rails'
+  gem 'cucumber', '0.7.3'
+  gem 'rspec-rails', '>= 2.0.0.beta.10'
+  gem 'spork'
+  gem 'launchy'    # So you can do Then show me the page
+end  
+
