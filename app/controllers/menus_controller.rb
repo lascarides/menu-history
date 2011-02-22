@@ -2,11 +2,12 @@ class MenusController < ApplicationController
   # GET /menus
   # GET /menus.xml
   def index
-    @menus = Menu.all
-
-    respond_to do |format|
-      format.html # index.html.erb
-      format.xml  { render :xml => @menus }
+    def index
+      @menus = Menu.find(:all, :order => "date_of_menu")
+      respond_to do |format|
+        format.html # index.html.erb
+        format.xml  { render :xml => @menus }
+      end
     end
   end
 
@@ -14,9 +15,8 @@ class MenusController < ApplicationController
   # GET /menus/1.xml
   def show
     @menu = Menu.find(params[:id])
-
     respond_to do |format|
-      format.html # show.html.erb
+      format.html { redirect_to @menu.menu_pages.first }
       format.xml  { render :xml => @menu }
     end
   end
@@ -25,7 +25,6 @@ class MenusController < ApplicationController
   # GET /menus/new.xml
   def new
     @menu = Menu.new
-
     respond_to do |format|
       format.html # new.html.erb
       format.xml  { render :xml => @menu }

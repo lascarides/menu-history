@@ -1,0 +1,97 @@
+MENU WORKFLOW (for test writing)
+
+TECHNICAL SPECIFICATIONS
+	- Rails 3
+	- RSpec and Cucumber for tests
+	- Database to be determined
+
+PHASE 1: Mid-March Launch
+
+	SETUP
+
+	- There should be a simple log-in system with two settings:
+		- "Staff"
+			- Can view all menus
+			- Can search all menus
+			- Can transcribe items
+			- Can add and edit menus
+			- Can promote "old style" menus to "new style"
+			- Can add sections to menus and add menus to itemizing queue
+		- "Volunteers", who are members of the public 
+			- Can view all menus
+			- Can search all menus
+			- Can transcribe items
+		- Public facing pages can be accessed by anyone
+			- Can view all menus
+			- Can search all menus
+			
+		* Note: If it simplifies things, let's allow transcription without logging in.
+
+	PUBLISHING WORKFLOW 
+
+	- The entire contents of the existing menu database are to be imported into the "original_menus" database.
+		- There should be the ability to add new menus to the original_menus table.
+		- Every menu original record should be accessible for editing and curation, same as currently.
+
+	- A new menu record should pull its data from the original_menu record, and maintain a has_one relationship so that the information from the original record can be pulled over at any time (read-only).
+		- Any original_menus items which have a corresponding new menu record should be locked for editing, even by an administrator.
+		- Upon new menu creation, it should also make a call the corresponding data from the Hades data (keyed via Call Number), to determine imageIDs, strucIDs and UUIDs (for establishing relationships between menus, pages and images).
+			- This can be a live call or an imported extract 
+
+	- New menu records should have "proper" fields as place holders for location, date, and other metadata
+		- If any "new" metadata field is blank, should pass through the original data (for display, not necessarily for searching)
+
+	- Before a menu can be released for crowdsourcing, it must be determined:
+		- Is all metadata pulled in?
+		- Have we found all the pages?
+		- Does each page have an image?
+		- Does it have prices?
+		- If so, what currency?
+		- Does it have sections?
+	- If an item has sections, all sections must be traced and labeled.
+		- Sections get a label.
+		- Each menu page has_many labels
+		- Each menu item (dish) belongs_to a section.
+		- A section must belong to a menu_page, but a menu_item need not belong to a section.
+	- Once a menu meets the above criteria, it can be queued for crowdsourcing.
+	- Check out ActiveModel::StateMachine to manage this progress
+
+	CROWDSOURCING
+
+	- Menus for crowdsourcing should be available to those who want to transcribe them in a queue (all those who meet the above criteria and are not marked as complete)
+	- Should display menus to fit in page width, sized via JPEG2000
+	- When a menu is chosen, click on an item position to bring up the transcribe panel.
+	- On one side should be a box to enter the item, a box for currency (if applicable), and a check box for is_questionable? ("I'm not sure about this one").
+	- The other side should be a JPEG2000 zoomed view of the area around the click for legibility.
+	 	- Should be pannable and zoomable to the next level.
+	- When an item is entered, the menu editing view should have a big "I think this menu is done" button, which should put the menu in the "provisionally complete" status, for review 
+		- Before a menu is marked as complete, anyone should be able to edit any other already-entered item (to make corrections, for example)
+
+	BROWSING
+
+	- From the home page, the default menu listing should be the last 15 or so added
+	- Other views should be text listings (with mini thumbnails if applicable) by year and location (city/state/country)
+
+=======================================
+
+Phase 2:
+
+	- TBD
+	- The original_menus table should no longer accept new menus. Any records created from this point forward should be created as "new"-style menus, without a corresponding "original_record".
+		- If possible, all "original_menus" records should have corresponding new records by this point.
+	
+	WORKFLOW
+	
+	- Add canonical locations to workflow
+		- Hades data may contain authority records.
+		- Possible integration with Gazetteer?
+	
+	BROWSING
+	
+	- Search by keyword.
+		- SOLR integration?
+	- Lists of menu items in alphabetical order/number of items
+	- We can develop these on the fly
+	
+	
+	
